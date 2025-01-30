@@ -16,6 +16,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Lennard Scheibel",
   description: "Hey there! This is my little corner of the internet.",
+  icons: [{ url: "/favicon.svg", type: "image/svg+xml" }],
 };
 
 export default function RootLayout({
