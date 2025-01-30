@@ -1,0 +1,7 @@
+/*.rt-BaseButton:where(.rt-variant-ghost):where([data-state="open"]) {*/
+/*    background-color: transparent;*/
+/*}*/
+
+/*.rt-BaseButton:where(.rt-variant-ghost):where(:hover) {*/
+/*    background-color: var(--accent-a3);*/
+/*}*/
