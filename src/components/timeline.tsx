@@ -61,12 +61,14 @@ const Timeline = ({}: TimelineProps) => {
           </>
         }
       >
-        An educational resource to play with the Chaikin curve algorithm.
+        This is meant as an educational resource to play with the Chaikin curve
+        algorithm, and was a quick project for a professor.
       </TimelineItem>
       <TimelineItem type="work" date="Feb, 2024—" title="Polyteia">
         As a software engineer at{" "}
         <Link href="https://www.polyteia.com/">Polyteia</Link> I’m building a
-        platform for administrative processes for authorites.
+        platform for administrative processes for authorites. We are currently
+        working with TypeScript, Next.js and GoLang.
       </TimelineItem>
       <TimelineItem
         type="uni"
@@ -84,10 +86,13 @@ const Timeline = ({}: TimelineProps) => {
         A dashboard displaying different visualizations of a simple dataset.
       </TimelineItem>
       <TimelineItem type="work" date="Apr, 2020—Dec, 2023" title="Noocoon">
-        At Noocoon I helped build the client of a cloud based planning tool for
-        electricians. A main responsibility was the creation of a lightweight
-        CAD system allowing users to place electric installations on a floor
-        plan.
+        At <Link href="https://www.noocoon.de/">Noocoon</Link> I helped build
+        the client of a cloud based planning tool for electricians. A main
+        responsibility was the creation of a{" "}
+        <Link href="https://www.noocoon.de/expert/installationsplan-erstellen/">
+          lightweight CAD application
+        </Link>{" "}
+        allowing users to place electric installations on a floor plan.
       </TimelineItem>
       <TimelineItem
         type="app"
@@ -106,7 +111,8 @@ const Timeline = ({}: TimelineProps) => {
       >
         <Text>
           A collection of mini games developed for a student service
-          organisation as part of their anniversary.
+          organisation as part of their anniversary. I was responsible for
+          creating the assets and designing the levels.
         </Text>
       </TimelineItem>
       <TimelineItem
@@ -122,7 +128,8 @@ const Timeline = ({}: TimelineProps) => {
         }
       >
         A game about playing mini golf with dice, developed with a friend as
-        part of the GMTK Game Jam 2022. Play online at itch.io.
+        part of the GMTK Game Jam 2022. I was mostly responsible for designing
+        the look of the game and creating the assets.
       </TimelineItem>
       <TimelineItem
         type="web"
@@ -152,7 +159,8 @@ const Timeline = ({}: TimelineProps) => {
       >
         Together with <Link href="https://v1b.es/">v1bes</Link> I worked on the
         website for{" "}
-        <Link href="https://www.oberflaechentechnik-kempen.de/">OTK</Link>.
+        <Link href="https://www.oberflaechentechnik-kempen.de/">OTK</Link> as a
+        frontend developer.
       </TimelineItem>
       <TimelineItem
         type="web"
@@ -164,7 +172,9 @@ const Timeline = ({}: TimelineProps) => {
           </>
         }
       >
-        Website for a local vet in Cremlingen, Germany.
+        Website for a local vet in Cremlingen, Germany. Together with the client
+        I developed the general branding, logo and website. The site runs on
+        Sapper (Svelte) and uses Strapi for content management.
       </TimelineItem>
       <TimelineItem type="work" date="Apr, 2019—Apr, 2020" title="3pc">
         As a frontend developer at the web agency{" "}
