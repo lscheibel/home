@@ -2,7 +2,6 @@ import React from "react";
 import {
   Badge,
   Box,
-  Button,
   Flex,
   FlexProps,
   Grid,
@@ -234,21 +233,16 @@ const TimelineItem = ({
         </TimelineYarnItem>
 
         <Flex
-          direction="column"
+          direction="row"
           gap="6"
           gridColumn={{ initial: "2", lg: "3" }}
           gridRow={{ initial: "2", lg: "2" }}
+          className="flex flex-nowrap justify-between"
         >
-          <Button
-            variant="ghost"
-            color={color}
-            className="w-full justify-start text-left text-accent-12"
-          >
-            <Heading size="3">{title}</Heading>
-            <Badge className="ml-auto" color={color}>
-              {label}
-            </Badge>
-          </Button>
+          <Heading size="3">{title}</Heading>
+          <Badge className="ml-auto" color={color}>
+            {label}
+          </Badge>
         </Flex>
       </Grid>
 
