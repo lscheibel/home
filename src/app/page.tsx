@@ -1,7 +1,7 @@
 import {
   Container,
-  DataList,
   Flex,
+  Grid,
   Heading,
   Link,
   Section,
@@ -9,6 +9,7 @@ import {
   Text,
 } from "@radix-ui/themes";
 import Timeline from "@/components/timeline";
+import ContactData from "@/components/contact-data";
 
 export default function Home() {
   return (
@@ -21,11 +22,11 @@ export default function Home() {
               <Heading size="5">
                 I’m a software engineer and web designer.
               </Heading>
-              <Text size="3" color="gray">
+              <Text size="3">
                 I’m currently writing my master thesis at{" "}
                 <Link href="https://www.kth.se/en">KTH</Link> about AI based
-                floor plan recognition, and helping to build a platform for
-                administrative processes at{" "}
+                floor plan recognition, and helping to simplify public
+                administration for authorities at{" "}
                 <Link href="https://www.polyteia.com/">Polyteia</Link>.
                 Previously, I’ve worked on{" "}
                 <Link href="https://www.noocoon.de/en/">Noocoon</Link> a
@@ -33,43 +34,12 @@ export default function Home() {
               </Text>
             </Flex>
 
-            <Flex direction="column" gap="5">
-              <Heading as="h2" size="3">
-                Find me here
-              </Heading>
-              <DataList.Root>
-                <DataList.Item align="center">
-                  <DataList.Label minWidth="9">Name</DataList.Label>
-                  <DataList.Value>Lennard Scheibel</DataList.Value>
-                </DataList.Item>
-                <DataList.Item>
-                  <DataList.Label minWidth="9">Email</DataList.Label>
-                  <DataList.Value>
-                    <Link href="mailto:contact@lennardscheibel.de">
-                      contact@lennardscheibel.de
-                    </Link>
-                  </DataList.Value>
-                </DataList.Item>
-                <DataList.Item>
-                  <DataList.Label minWidth="9">GitHub</DataList.Label>
-                  <DataList.Value>
-                    <Link href="https://github.com/lscheibel">@lscheibel</Link>
-                  </DataList.Value>
-                </DataList.Item>
-                <DataList.Item>
-                  <DataList.Label minWidth="9">Social Media</DataList.Label>
-                  <DataList.Value>
-                    <Link href="https://mas.to/@ls">mas.to/@ls</Link>
-                  </DataList.Value>
-                </DataList.Item>
-                <DataList.Item>
-                  <DataList.Label minWidth="9">itch.io</DataList.Label>
-                  <DataList.Value>
-                    <Link href="https://tjsol.itch.io/">tjsol</Link>
-                  </DataList.Value>
-                </DataList.Item>
-              </DataList.Root>
-            </Flex>
+            {/*<Flex direction="column" gap="5">*/}
+            {/*  <Heading as="h2" size="3">*/}
+            {/*    Find me here*/}
+            {/*  </Heading>*/}
+            {/*  <ContactData />*/}
+            {/*</Flex>*/}
           </Flex>
         </Container>
       </Section>
@@ -79,14 +49,27 @@ export default function Home() {
       {/*    <Separator className="w-full" />*/}
       {/*  </Container>*/}
       {/*</Section>*/}
-
+      <Container px="6">
+        <Separator className="w-full" />
+      </Container>
       <Section px="6">
         <Container>
-          <Separator className="w-full" mb="6" />
-          <Heading size="3" mb="9">
-            Event Stream
-          </Heading>
-          <Timeline />
+          {/*<Separator className="w-full" mb="6" />*/}
+          <Grid columns={{ initial: "auto", sm: "auto 1fr" }} gap="9">
+            <Flex direction="column" gap="5">
+              {/*<Heading as="h2" size="3">*/}
+              {/*  Find me here*/}
+              {/*</Heading>*/}
+              <ContactData align="start" />
+            </Flex>
+            <Separator className="w-full sm:hidden" />
+            <Flex direction="column">
+              {/*<Heading size="3" mb="9">*/}
+              {/*  Projects*/}
+              {/*</Heading>*/}
+              <Timeline />
+            </Flex>
+          </Grid>
         </Container>
       </Section>
       <Section px="6">
