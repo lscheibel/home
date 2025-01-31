@@ -1,9 +1,9 @@
 import React from "react";
 import {
-  AspectRatio,
   Badge,
   Box,
   Button,
+  DataList,
   Dialog,
   Flex,
   FlexProps,
@@ -62,6 +62,7 @@ const Timeline = ({}: TimelineProps) => {
           </span>
         }
       />
+
       <TimelineItem
         type="uni"
         date="Feb—Mar, 2024"
@@ -75,9 +76,26 @@ const Timeline = ({}: TimelineProps) => {
           </>
         }
         details={
-          <Flex direction="column" gap="3">
+          <Flex direction="column" gap="4">
+            <DataList.Root>
+              <DataList.Item>
+                <DataList.Label minWidth="9">Date</DataList.Label>
+                <DataList.Value>Feb—Mar, 2024</DataList.Value>
+              </DataList.Item>
+              <DataList.Item>
+                <DataList.Label minWidth="9">Stack</DataList.Label>
+                <DataList.Value>TypeScript, React</DataList.Value>
+              </DataList.Item>
+            </DataList.Root>
+            <Text>
+              The goal of this project was to give students an interactive tool
+              to play around with the Chaikin interpolation algorithm. It has
+              many small quality-of-life features that are meant to be
+              discovered not explained, such as being able to double click a
+              number field in order ot reset its value.
+            </Text>
             <Figure>
-              <ScrollArea scrollbars="horizontal" mt="2">
+              <ScrollArea scrollbars="horizontal">
                 <Flex direction="row" wrap="nowrap" gap="2">
                   <Image
                     src={chaikin1}
@@ -103,12 +121,14 @@ const Timeline = ({}: TimelineProps) => {
         This is meant as an educational resource to play with the Chaikin curve
         algorithm, and was a quick project for a professor.
       </TimelineItem>
+
       <TimelineItem type="work" date="Feb, 2024—" title="Polyteia">
         As a software engineer at{" "}
         <Link href="https://www.polyteia.com/">Polyteia</Link> I’m building a
         platform for administrative processes for authorites. We are currently
         working with TypeScript, Next.js and GoLang.
       </TimelineItem>
+
       <TimelineItem
         type="uni"
         date="Jan, 2024"
@@ -122,28 +142,57 @@ const Timeline = ({}: TimelineProps) => {
           </>
         }
         details={
-          <Flex direction="column" gap="3">
-            <Figure>
-              <ScrollArea scrollbars="horizontal" mt="2" className="rounded-1">
-                <Flex direction="row" wrap="nowrap" gap="2">
-                  <Image
-                    src={ivis2}
-                    alt={""}
-                    className="w-auto h-[512px] object-cover rounded-1 shrink-0"
-                  />
-                  <Image
-                    src={ivis1}
-                    alt={""}
-                    className="w-auto h-[512px] object-cover rounded-1 shrink-0"
-                  />
-                </Flex>
-              </ScrollArea>
-            </Figure>
-          </Flex>
+          <>
+            <Flex direction="column" gap="4">
+              <DataList.Root>
+                <DataList.Item>
+                  <DataList.Label minWidth="9">Date</DataList.Label>
+                  <DataList.Value>Jan, 2024</DataList.Value>
+                </DataList.Item>
+                <DataList.Item>
+                  <DataList.Label minWidth="9">Stack</DataList.Label>
+                  <DataList.Value>TypeScript, React, D3</DataList.Value>
+                </DataList.Item>
+              </DataList.Root>
+
+              <Text>
+                Based on a dataset from a self-evaluation survey, this dashboard
+                tries to evaluate different group settings. It is a React app
+                using <Link href="https://d3js.org/">D3’s</Link> helper
+                functions to transform the data into coordinates, which are used
+                to drive the SVG shapes. All elements were first designed in
+                Figma, where the radar chart was by far the hardest to come up
+                with something that would fit the overall aesthetic. In the end
+                I’m very happy with what I ended up with.
+              </Text>
+              <Figure>
+                <ScrollArea
+                  scrollbars="horizontal"
+                  mt="2"
+                  className="rounded-1"
+                >
+                  <Flex direction="row" wrap="nowrap" gap="2">
+                    <Image
+                      src={ivis2}
+                      alt={""}
+                      className="w-auto h-[512px] object-cover rounded-1 shrink-0"
+                    />
+                    <Image
+                      src={ivis1}
+                      alt={""}
+                      className="w-auto h-[512px] object-cover rounded-1 shrink-0"
+                    />
+                  </Flex>
+                </ScrollArea>
+              </Figure>
+            </Flex>
+          </>
         }
       >
-        A dashboard displaying different visualizations of a simple dataset.
+        A dashboard displaying different visualizations of a dataset from a
+        self-evaluation survey.
       </TimelineItem>
+
       <TimelineItem type="work" date="Apr, 2020—Dec, 2023" title="Noocoon">
         At <Link href="https://www.noocoon.de/">Noocoon</Link> I helped build
         the client of a cloud based planning tool for electricians. A main
@@ -169,7 +218,17 @@ const Timeline = ({}: TimelineProps) => {
           </>
         }
         details={
-          <Flex direction="column" gap="3">
+          <Flex direction="column" gap="4">
+            <DataList.Root>
+              <DataList.Item>
+                <DataList.Label minWidth="9">Date</DataList.Label>
+                <DataList.Value>May, 2022—Jan, 2023</DataList.Value>
+              </DataList.Item>
+              <DataList.Item>
+                <DataList.Label minWidth="9">Stack</DataList.Label>
+                <DataList.Value>Illustrator, Godot</DataList.Value>
+              </DataList.Item>
+            </DataList.Root>
             <Text>
               This was a project with the{" "}
               <Link href="https://stw-on.de/">
@@ -189,20 +248,16 @@ const Timeline = ({}: TimelineProps) => {
             >
               <ScrollArea scrollbars="horizontal" mt="2">
                 <Flex direction="row" wrap="nowrap" gap="2">
-                  <AspectRatio ratio={3 / 1}>
-                    <Image
-                      src={miniGames1}
-                      alt={""}
-                      className="w-full h-full object-cover rounded-1"
-                    />
-                  </AspectRatio>
-                  <AspectRatio ratio={3 / 1}>
-                    <Image
-                      src={miniGames2}
-                      alt={""}
-                      className="w-full h-full object-cover rounded-1"
-                    />
-                  </AspectRatio>
+                  <Image
+                    src={miniGames1}
+                    alt={""}
+                    className="w-auto h-[512px] object-cover rounded-1 shrink-0"
+                  />
+                  <Image
+                    src={miniGames2}
+                    alt={""}
+                    className="w-auto h-[512px] object-cover rounded-1 shrink-0"
+                  />
                 </Flex>
               </ScrollArea>
             </Figure>
@@ -232,6 +287,7 @@ const Timeline = ({}: TimelineProps) => {
         part of the GMTK Game Jam 2022. I was mostly responsible for designing
         the look of the game and creating the assets.
       </TimelineItem>
+
       <TimelineItem
         type="web"
         date="Feb—Mar, 2022"
@@ -248,6 +304,7 @@ const Timeline = ({}: TimelineProps) => {
         synchronization features of Yjs with the data management capabilities of
         Redux.
       </TimelineItem>
+
       <TimelineItem
         type="web"
         date="Nov, 2020—Jan, 2021"
@@ -263,6 +320,7 @@ const Timeline = ({}: TimelineProps) => {
         <Link href="https://www.oberflaechentechnik-kempen.de/">OTK</Link> as a
         frontend developer.
       </TimelineItem>
+
       <TimelineItem
         type="web"
         date="Sep, 2019—"
@@ -277,6 +335,7 @@ const Timeline = ({}: TimelineProps) => {
         I developed the general branding, logo and website. The site runs on
         Sapper (Svelte) and uses Strapi for content management.
       </TimelineItem>
+
       <TimelineItem type="work" date="Apr, 2019—Apr, 2020" title="3pc">
         As a frontend developer at the web agency{" "}
         <Link href="https://3pc.de/en/">3pc</Link> I build website components
@@ -395,8 +454,8 @@ const TimelineItem = ({
           {details ? (
             <Dialog.Content
               maxWidth="calc(100vw - 32px)"
-              width="1024px"
-              className="overflow-auto p-rx-9"
+              width="calc(65ch + 128px)"
+              className="overflow-auto p-rx-6 px-rx-4 xs:p-rx-6 sm:p-rx-9"
             >
               <Dialog.Title mb="5">{title}</Dialog.Title>
               {details}
