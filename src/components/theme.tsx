@@ -9,7 +9,7 @@ const Theme = ({ children }: ThemeProps) => {
   return (
     <RadixTheme
       hasBackground
-      appearance="inherit"
+      appearance="light"
       accentColor="indigo"
       grayColor="slate"
       panelBackground="solid"

@@ -16,14 +16,10 @@ import {
   Separator,
   Text,
 } from "@radix-ui/themes";
-import {
-  BackpackIcon,
-  DotFilledIcon,
-  DotIcon,
-  GlobeIcon,
-  MobileIcon,
-} from "@radix-ui/react-icons";
+import { DotFilledIcon, DotIcon } from "@radix-ui/react-icons";
 import GraduationCapIcon from "@/assets/icons/graduation-cap.svg";
+import PuzzleIcon from "@/assets/icons/puzzle.svg";
+import BriefcaseIcon from "@/assets/icons/briefcase.svg";
 import BurstIcon from "@/assets/icons/burst.svg";
 import cn from "classnames";
 import { IconProps } from "@radix-ui/react-icons/dist/types";
@@ -39,10 +35,9 @@ import Figure from "@/components/figure";
 import BlinkingEye from "@/components/blinking-eye";
 
 const timelineItemType = {
-  work: { color: "green", label: "Work", icon: BackpackIcon },
-  web: { color: "tomato", label: "Web", icon: GlobeIcon },
-  app: { color: "bronze", label: "App", icon: MobileIcon },
+  personal: { color: "yellow", label: "Personal", icon: makeIcon(PuzzleIcon) },
   uni: { color: "indigo", label: "Uni", icon: makeIcon(GraduationCapIcon) },
+  work: { color: "grass", label: "Work", icon: makeIcon(BriefcaseIcon) },
 } as const;
 
 export interface TimelineProps {}
@@ -166,11 +161,7 @@ const Timeline = ({}: TimelineProps) => {
                 I’m very happy with what I ended up with.
               </Text>
               <Figure>
-                <ScrollArea
-                  scrollbars="horizontal"
-                  mt="2"
-                  className="rounded-1"
-                >
+                <ScrollArea scrollbars="horizontal" className="rounded-1">
                   <Flex direction="row" wrap="nowrap" gap="2">
                     <Image
                       src={ivis2}
@@ -204,7 +195,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="app"
+        type="work"
         date="May, 2022—Jan, 2023"
         title="Student Life Mini Games"
         links={
@@ -246,7 +237,7 @@ const Timeline = ({}: TimelineProps) => {
                 <Text color="gray">Screenshots from two of the games.</Text>
               }
             >
-              <ScrollArea scrollbars="horizontal" mt="2">
+              <ScrollArea scrollbars="horizontal">
                 <Flex direction="row" wrap="nowrap" gap="2">
                   <Image
                     src={miniGames1}
@@ -272,7 +263,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="web"
+        type="personal"
         date="Aug, 2022"
         title="Mini Dice"
         links={
@@ -289,7 +280,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="web"
+        type="uni"
         date="Feb—Mar, 2022"
         title="Redux Yjs Bindings"
         links={
@@ -306,7 +297,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="web"
+        type="work"
         date="Nov, 2020—Jan, 2021"
         title="OTK GmbH"
         links={
@@ -322,7 +313,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="web"
+        type="work"
         date="Sep, 2019—"
         title="Veterinarian Website"
         links={
@@ -531,7 +522,13 @@ const TimelineItemNow = ({ title }: TimelineItemNowProps) => {
         </Flex>
 
         <TimelineYarnItem attach="bottom">
-          <Flex gridColumn="1" gridRow="1" align="center" justify="center">
+          <Flex
+            gridColumn="1"
+            gridRow="1"
+            align="center"
+            justify="center"
+            className="h-[5px]"
+          >
             <div className="relative -m-2 z-10">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="bg-gray-4 size-rx-2 rounded-full animate-ping" />
