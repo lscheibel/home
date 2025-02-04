@@ -10,7 +10,7 @@ import {
 } from "@radix-ui/themes";
 import Timeline from "@/components/timeline";
 import ContactData from "@/components/contact-data";
-import { DotFilledIcon } from "@radix-ui/react-icons";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
@@ -75,25 +75,7 @@ export default function Home() {
           </Grid>
         </Container>
       </Section>
-      <Section px="6">
-        <Container>
-          <Separator className="w-full" mb="6" />
-          <footer className="flex gap-rx-2 items-center">
-            <Text color="gray">
-              Lennard Scheibel, {new Date().getFullYear()}
-            </Text>
-            <Text color="gray">
-              <DotFilledIcon />
-            </Text>
-            <Link href="https://github.com/lscheibel/home" color="gray">
-              Source
-            </Link>
-            <Link className="ml-auto" color="gray" href="/impressum.json">
-              Imprint
-            </Link>
-          </footer>
-        </Container>
-      </Section>
+      <Footer />
     </>
   );
 }
