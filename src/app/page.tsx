@@ -10,6 +10,7 @@ import {
 } from "@radix-ui/themes";
 import Timeline from "@/components/timeline";
 import ContactData from "@/components/contact-data";
+import { DotFilledIcon } from "@radix-ui/react-icons";
 
 export default function Home() {
   return (
@@ -17,7 +18,9 @@ export default function Home() {
       <Section px="6" mt="9">
         <Container>
           <Flex direction="column" maxWidth="65ch" gap="6">
-            <Heading size="9">Hey there, it’s me! 👋</Heading>
+            <Heading size="9" className="text-balance">
+              Hey there, it’s me! 👋
+            </Heading>
             <Flex direction="column" gap="2">
               <Heading size="5">
                 I’m a software engineer and web designer.
@@ -75,12 +78,17 @@ export default function Home() {
       <Section px="6">
         <Container>
           <Separator className="w-full" mb="6" />
-          <footer className="flex justify-between">
+          <footer className="flex gap-rx-2 items-center">
             <Text color="gray">
               Lennard Scheibel, {new Date().getFullYear()}
             </Text>
-
-            <Link color="gray" href="/impressum.json">
+            <Text color="gray">
+              <DotFilledIcon />
+            </Text>
+            <Link href="https://github.com/lscheibel/home" color="gray">
+              Source
+            </Link>
+            <Link className="ml-auto" color="gray" href="/impressum.json">
               Imprint
             </Link>
           </footer>

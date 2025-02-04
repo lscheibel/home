@@ -16,7 +16,7 @@ import {
   Separator,
   Text,
 } from "@radix-ui/themes";
-import { DotFilledIcon, DotIcon } from "@radix-ui/react-icons";
+import { ClockIcon, DotFilledIcon, DotIcon } from "@radix-ui/react-icons";
 import GraduationCapIcon from "@/assets/icons/graduation-cap.svg";
 import PuzzleIcon from "@/assets/icons/puzzle.svg";
 import BriefcaseIcon from "@/assets/icons/briefcase.svg";
@@ -36,8 +36,13 @@ import BlinkingEye from "@/components/blinking-eye";
 
 const timelineItemType = {
   personal: { color: "yellow", label: "Personal", icon: makeIcon(PuzzleIcon) },
-  uni: { color: "indigo", label: "Uni", icon: makeIcon(GraduationCapIcon) },
+  uni: {
+    color: "indigo",
+    label: "University",
+    icon: makeIcon(GraduationCapIcon),
+  },
   work: { color: "grass", label: "Work", icon: makeIcon(BriefcaseIcon) },
+  freelance: { color: "lime", label: "Freelance", icon: ClockIcon },
 } as const;
 
 export interface TimelineProps {}
@@ -195,7 +200,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="work"
+        type="freelance"
         date="May, 2022—Jan, 2023"
         title="Student Life Mini Games"
         links={
@@ -297,7 +302,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="work"
+        type="freelance"
         date="Nov, 2020—Jan, 2021"
         title="OTK GmbH"
         links={
@@ -313,7 +318,7 @@ const Timeline = ({}: TimelineProps) => {
       </TimelineItem>
 
       <TimelineItem
-        type="work"
+        type="freelance"
         date="Sep, 2019—"
         title="Veterinarian Website"
         links={
