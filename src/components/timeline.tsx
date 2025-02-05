@@ -415,11 +415,11 @@ const TimelineItem = ({
                 <Button
                   variant="ghost"
                   size="1"
-                  color={color}
-                  className="lg:opacity-0 group-hover/item:opacity-100 text-accent-12 group cursor-default bg-transparent inline ml-auto md:ml-0"
+                  color="gray"
+                  className="lg:opacity-100 group-hover/item:opacity-100 bg-transparent inline ml-auto md:ml-0"
                 >
                   View
-                  <BlinkingEye width="14" height="14" className="inline ml-1" />
+                  <BlinkingEye width="14" height="14" className="inline ml-2" />
                 </Button>
               </Dialog.Trigger>
             ) : null}

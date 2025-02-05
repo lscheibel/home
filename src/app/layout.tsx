@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Theme from "@/components/theme";
+import { ThemeProvider } from "next-themes";
 import "@radix-ui/themes/styles.css";
 import "./globals.css";
 
@@ -25,9 +26,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="antialiased">
-        <Theme>{children}</Theme>
+        <ThemeProvider attribute="class">
+          <Theme>{children}</Theme>
+        </ThemeProvider>
       </body>
     </html>
   );
