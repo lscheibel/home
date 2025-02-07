@@ -18,8 +18,15 @@ html {
   background-color: var(--color-background);
 }
 
-body {
-  /*color: var(--foreground);*/
-  /*background: var(--background);*/
-  /*font-family: Arial, Helvetica, sans-serif;*/
+html.light {
+  background-color: snow;
+  background-color: color-mix(in srgb, snow, white 35%);
+  background-image: conic-gradient(in srgb at 0% 0%, snow, white);
 }
+
+html.dark {
+  background-color: #111;
+  background-color: color-mix(in srgb, #101010, #111 35%);
+  background-image: conic-gradient(in srgb at 0% 0%, #101010, #111);
+}
+

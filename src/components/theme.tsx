@@ -8,7 +8,7 @@ export interface ThemeProps {
 const Theme = ({ children }: ThemeProps) => {
   return (
     <RadixTheme
-      hasBackground
+      hasBackground={false}
       accentColor="indigo"
       grayColor="slate"
       panelBackground="solid"
