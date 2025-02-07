@@ -32,44 +32,26 @@ export default function Home() {
                 administration for authorities at{" "}
                 <Link href="https://www.polyteia.com/">Polyteia</Link>.
                 Previously, I’ve worked on{" "}
-                <Link href="https://www.noocoon.de/en/">Noocoon</Link> a
+                <Link href="https://www.noocoon.de/en/">Noocoon</Link>, a
                 planning tool for electricians.
               </Text>
             </Flex>
-
-            {/*<Flex direction="column" gap="5">*/}
-            {/*  <Heading as="h2" size="3">*/}
-            {/*    Find me here*/}
-            {/*  </Heading>*/}
-            {/*  <ContactData />*/}
-            {/*</Flex>*/}
           </Flex>
         </Container>
       </Section>
 
-      {/*<Section>*/}
-      {/*  <Container>*/}
-      {/*    <Separator className="w-full" />*/}
-      {/*  </Container>*/}
-      {/*</Section>*/}
       <Container px="6">
         <Separator className="w-full" />
       </Container>
+
       <Section px="6">
         <Container>
-          {/*<Separator className="w-full" mb="6" />*/}
           <Grid columns={{ initial: "auto", sm: "auto 1fr" }} gap="9">
             <Flex direction="column" gap="5">
-              {/*<Heading as="h2" size="3">*/}
-              {/*  Find me here*/}
-              {/*</Heading>*/}
               <ContactData align="start" />
             </Flex>
             <Separator className="w-full sm:hidden" />
             <Flex direction="column">
-              {/*<Heading size="3" mb="9">*/}
-              {/*  Projects*/}
-              {/*</Heading>*/}
               <Timeline />
             </Flex>
           </Grid>
