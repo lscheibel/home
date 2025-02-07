@@ -15,9 +15,11 @@ import "./globals.css";
 // });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://lscheibel.vercel.app"),
   title: "Lennard Scheibel",
   description: "Hey there! This is my little corner of the internet.",
   icons: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  openGraph: { images: "/og-image.png" },
 };
 
 export default function RootLayout({
